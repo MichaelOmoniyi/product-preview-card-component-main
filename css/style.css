@@ -12,62 +12,63 @@ body{
 .cardContainer{
     width: 100%;
     box-sizing: border-box;
-    padding: auto;
-    padding-top: 2rem;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
     overflow: auto;
 }
 .cardBox{
-    width: 80%;
-    height: auto;
-    box-sizing: border-box;
-    margin: auto;
-
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 .productImage{
-    width: 50%;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    width: 100%;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0%;
 }
 .desktopImage{
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-.mobileImage{
     display: none;
 }
+.mobileImage{
+    width: 100%;
+    margin-bottom: 0%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 100%;
+    display: block;
+}
 .cardContent{
-    width: 50%;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     background-color: hsl(0, 0%, 100%);
     text-align: left;
-    padding: 3rem 2.5rem;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 100%;
+    margin-top: 0%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    padding: 1.5rem;
 }
 .cardContent h3{
-    margin-bottom: 1rem;
     font-family: 'Montserrat', sans-serif;
     color: hsl(228, 12%, 48%);
-    word-spacing: 5px;
+    word-spacing: 10px;
+    margin-bottom: 0.5rem;
 }
 .cardContent h1{
     font-family: 'Fraunces', serif;
     font-weight: 700;
     color: hsl(212, 21%, 14%);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.3rem;
 }
 .cardContent p{
-    font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.6;
     line-break: auto;
-    margin-bottom: 2rem;
+    font-size: 1.07rem;
+    margin-bottom: 0.5rem;
     color: hsl(228, 12%, 48%);
 }
 .price{
@@ -89,6 +90,7 @@ body{
     text-decoration: line-through;
 }
 .cardContent a{
+    margin-bottom: 1rem;
     width: 100%;
     display: block;
     justify-content: center;
@@ -98,62 +100,63 @@ body{
     border-radius: 10px;
     color: white;
     background-color: hsl(158, 36%, 37%);
-}
+    }
 .cardContent a:hover{
     background-color: hsl(150, 79%, 7%);
-}
+    }
+
+
 .attribution { 
     font-size: 11px; text-align: center; 
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
-@media (max-width: 375px) {
+@media (min-width: 1440px) {
     .cardContainer{
-        padding: 1rem;
+        width: 100%;
         box-sizing: border-box;
+        padding: auto;
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+        overflow: auto;
     }
     .cardBox{
-        width: 100%;
-        flex-direction: column;
+        width: 80%;
+        height: auto;
         box-sizing: border-box;
+        margin: auto;
+        flex-direction: row;
     }
     .productImage{
-        width: 100%;
-        border-bottom-left-radius: 0px;
-        border-top-right-radius: 10px;
-        margin-bottom: 0%;
+        width: 50%;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
     .desktopImage{
-        display: none;
-    }
-    .mobileImage{
         width: 100%;
-        margin-bottom: 0%;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
         height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         display: block;
     }
+    .mobileImage{
+        display: none;
+    }
     .cardContent{
-        width: 100%;
-        margin-top: 0%;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 10px;
-        padding: 1.5rem;
+        width: 50%;
+        padding: 3rem 2.5rem;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
     }
     .cardContent h3{
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
     .cardContent h1{
-        margin-bottom: 1rem;
-        font-size: 2.3rem;
+        margin-bottom: 2rem;
     }
     .cardContent p{
-        font-size: 1.07rem;
-        margin-bottom: 0.5rem;
-    }
-    .cardContent a{
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 }
